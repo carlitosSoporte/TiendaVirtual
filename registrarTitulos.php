@@ -19,8 +19,8 @@
         <div class="collapse text-center" id="navbarToggleExternalContent">
             <div class="bg-danger p-2">
                 <h5 class="text-white h4 text-center mb-4">Gestion de juegos</h5>
-                <a href="registrarTitulos.php"><p class="text-warning"><u>Registrar un juego (titulo)</u></p></a>
-                <a href="listarTitulos.php"><p class="text-warning"><u>Listado de juegos(titulo)</u></p></a>
+                <a href="registrarTitulos.php"><p class="text-warning"><strong><u>Registrar un juego (titulo)</u></strong></p></a>
+                <a href="listarTitulos.php"><p class="text-warning"><u>Listado de juegos (titulo)</u></p></a>
             </div>
         </div>
     
@@ -33,31 +33,35 @@
     <hr>
     <div class="container mt-5">
         <form action="" method="post">
-            
             <div class="row justify-content-center">
-                <div class="col-md-6">
-                <h1 class="text-center text-danger mb-5">Registro de video juegos</h1>
+                <h1 class="text-white mb-5">Registro de video juegos</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-5">
                     <div class="form-group">
-                    <label for="nombre" class="text-danger mt-3">Nombre del video juego:</label>
-                        <input type="text" class="form-control" name="nombre"  placeholder="Ingrese el nombre del juego"> 
+                    <label for="nombre" class="text-danger mt-2">Nombre del video juego:</label>
+                        <input type="text" class="form-control" name="nombre"  placeholder="Ingrese el nombre del juego" required> 
                     </div>
                     <div class="form-group">
                         <label for="fechaEstreno" class="text-danger mt-3">Fecha estreno del video juego:</label>
-                        <input type="date" class="form-control" name="fechaEstreno"  placeholder="Ingrese el nombre del juego"> 
+                        <input type="date" class="form-control" name="fechaEstreno"  placeholder="Ingrese el nombre del juego" required> 
                     </div>
                     <div class="form-group">
-                    <label for="genero" class="text-danger mt-3">Genero del video juego:</label>
-                        <select class="form-select genero">
-                            <option selected>Seleccione un genero de la lista:</option>
-                            <option value="1">Accion</option>
+                        <label  class="text-danger mt-3">Genero del video juego:</label>
+                        <select class="form-select genero" name="genero" required>
+                            <option value="1" selected>Accion</option>
                             <option value="2">Deporte</option>
                             <option value="3">Aventura</option>
                             <option value="4">Otro</option>
                         </select> 
                     </div>
                     <div class="form-group">
+                      <label class="text-danger mt-3">Valor del video juego:</label>
+                      <input type="number" class="form-control" name="valor" placeholder="ingrese el precio del video juego" required>
+                    </div>
+                    <div class="form-group">
                         <label for="imagen" class="text-danger mt-3">Imagen del video juego:</label>
-                        <input type="file" class="form-control-file" name="imagen">
+                        <input type="file" class="form-control-file" name="imagen" required>
                         <small id="fileHelpId" class="form-text text-danger">Solo se admite formato .png, .jpg, jpeg.</small>
                     </div>
                     <p class="text-center mb-5"><button type="submit" class="btn btn-danger mt-3" name="registrar">Registrar video juego</button></p>

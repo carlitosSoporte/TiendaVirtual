@@ -20,7 +20,7 @@
             <div class="bg-danger p-2">
                 <h5 class="text-white h4 text-center mb-4">Gestion de juegos</h5>
                 <a href="registrarTitulos.php"><p class="text-warning"><u>Registrar un juego (titulo)</u></p></a>
-                <a href="listarTitulos.php"><p class="text-warning"><u>Listado de juegos(titulo)</u></p></a>
+                <a href="listarTitulos.php"><p class="text-warning"> <strong><u>Listado de juegos (titulo) </u></strong> </p></a>
             </div>
         </div>
     
@@ -32,7 +32,9 @@
     <hr>
     <hr>
     <div class="container mt-5">
-        
+        <div class="row justify-content-center">
+          <h1>Listado de video juegos (titulos)</h1>
+        </div>
     </div>
     <footer class="bg-danger text-center text-white">
 		<div class="container">
