@@ -19,8 +19,8 @@
         <div class="collapse text-center" id="navbarToggleExternalContent">
             <div class="bg-danger p-2">
                 <h5 class="text-white h4 text-center mb-4">Gestion de juegos</h5>
-                <a href="#"><p class="text-warning"><u>Registrar un juego (titulo)</u></p></a>
-                <a href="#"><p class="text-warning"><u>Listado de juegos(titulo)</u></p></a>
+                <a href="registrarTitulos.php"><p class="text-warning"><u>Registrar un juego (titulo)</u></p></a>
+                <a href="listarTitulos.php"><p class="text-warning"><u>Listado de juegos(titulo)</u></p></a>
             </div>
         </div>
     
