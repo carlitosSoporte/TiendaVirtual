@@ -48,8 +48,8 @@
         <div class="collapse text-center" id="navbarToggleExternalContent">
             <div class="bg-danger p-2">
                 <h5 class="text-white h4 text-center mb-4">Gestion de juegos</h5>
-                <a href="registrarTitulos.php"><p class="text-warning"><u>Registrar un juego (titulo)</u></p></a>
-                <a href="listarTitulos.php"><p class="text-warning"> <strong><u>Listado de juegos (titulo) </u></strong> </p></a>
+                <a href="formularioTitulos.php"><p class="text-warning"><u>Registrar un juego (titulo)</u></p></a>
+                <a href="listadoTitulos.php"><p class="text-warning"> <strong><u>Listado de juegos (titulo) </u></strong> </p></a>
             </div>
         </div>
     
@@ -68,7 +68,7 @@
             <div class="col-md-7">
                 <div class="alert alert-<?=$color?> text-center text-danger p-5" role="alert">
                     <p class="col-md-12"><strong><?=$mensaje?></strong></p>
-                    <a class="btn btn-<?=$color?> col-md-8 mt-2" href="registrarTitulos.php" role="button">Volver al registro</a>
+                    <a class="btn btn-<?=$color?> col-md-8 mt-2" href="formularioTitulos.php" role="button">Volver al registro</a>
                 </div>
             </div>
         </div>

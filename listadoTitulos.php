@@ -20,8 +20,8 @@
           <div class="collapse text-center" id="navbarToggleExternalContent">
               <div class="bg-danger p-2">
                   <h5 class="text-white h4 text-center mb-4">Gestion de juegos</h5>
-                  <a href="registrarTitulos.php"><p class="text-warning"><u>Registrar un juego (titulo)</u></p></a>
-                  <a href="listarTitulos.php"><p class="text-warning"> <strong><u>Listado de juegos (titulo) </u></strong> </p></a>
+                  <a href="formularioTitulos.php"><p class="text-warning"><u>Registrar un juego (titulo)</u></p></a>
+                  <a href="listadoTitulos.php"><p class="text-warning"> <strong><u>Listado de juegos (titulo) </u></strong> </p></a>
               </div>
           </div>
       </div>
@@ -72,7 +72,7 @@
                               </button>
                             </div>
                             <div class="modal-body text-warning">
-                              <form action="actualizarImagen" method="post" enctype="multipart/form-data">
+                              <form action="actualizarTitulo.php" method="post" enctype="multipart/form-data">
                                 <div class="form-group">
                                   <label>Nuevo Precio: </label>
                                   <input type="text" class="form-control" name="valor"  value=<?=$fila['valor']?> placeholder="ingrese el nuevo precio">
@@ -82,10 +82,11 @@
                                   <input type="file" class="form-control-file" name="imagen">
                                   <small id="fileHelpId" class="form-text text-white"><strong>*Solo se admite formato .png, .jpg, jpeg.</strong></small>
                                 </div>
+                                <p class="text-center"><button type="submit" class="btn btn-danger col-md-5 col-5">Guardar</button></p>
                               </form>
                             </div>
                             <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                              <button type="button" class="btn btn-info" data-dismiss="modal">Cerrar</button>
                             </div>
                           </div>
                         </div>

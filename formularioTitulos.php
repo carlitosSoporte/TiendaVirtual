@@ -19,8 +19,8 @@
         <div class="collapse text-center" id="navbarToggleExternalContent">
             <div class="bg-danger p-2">
                 <h5 class="text-white h4 text-center mb-4">Gestion de videojuegos</h5>
-                <a href="registrarTitulos.php"><p class="text-warning"><strong><u>Registrar un videojuego (titulo)</u></strong></p></a>
-                <a href="listarTitulos.php"><p class="text-warning"><u>Listado de videojuegos (titulo)</u></p></a>
+                <a href="formularioTitulos.php"><p class="text-warning"><strong><u>Registrar un videojuego (titulo)</u></strong></p></a>
+                <a href="listadoTitulos.php"><p class="text-warning"><u>Listado de videojuegos (titulo)</u></p></a>
             </div>
         </div>
     
