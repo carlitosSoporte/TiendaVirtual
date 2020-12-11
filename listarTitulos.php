@@ -49,10 +49,12 @@
                               <p class="card-text">Fecha Estreno: <?= $fila["fechaEstreno"] ?><p class="lead"></p>
                               <p class="card-text">Genero: <?= $fila["genero"] ?><p class="lead"></p>
                               <p class="card-text">Precio: $ <?= $fila["valor"] ?><p class="lead"></p>
-                              <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editar<?= $fila["idTitulo"] ?>">
-                                  Editar
-                              </button>
-                              <a href="eliminarUsuarios.php?id=<?= $fila["idUsuario"]?>" class="btn btn-danger">Eliminar</a>
+                              <p>
+                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editar<?= $fila["idTitulo"] ?>">
+                                    Editar
+                                </button>
+                              </p>
+                              <a href="eliminarTitulo.php?id=<?= $fila["idTitulo"]?>" class="btn btn-danger">Eliminar</a>
                           </div>
                       </div>
                       
