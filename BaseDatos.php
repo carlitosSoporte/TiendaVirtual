@@ -25,10 +25,10 @@ class BaseDatos{
     public function escribirDatos($consultaSQL){
         $conexionBD = $this->conectarBD();
         $queryEscribirDatos = $conexionBD->prepare($consultaSQL);
-        $resultado= $queryEscribirDatos->execute();
+        $resultado = $queryEscribirDatos->execute();
 
         if($resultado){
-            echo "Modificacion realizada";
+            return true;
         }
         else{
             print_r($queryEscribirDatos->errorInfo());

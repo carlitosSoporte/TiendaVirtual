@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <title>Registro de video juegos</title>
+    <title>Registro de videojuegos</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -18,9 +18,9 @@
         </nav>
         <div class="collapse text-center" id="navbarToggleExternalContent">
             <div class="bg-danger p-2">
-                <h5 class="text-white h4 text-center mb-4">Gestion de juegos</h5>
-                <a href="registrarTitulos.php"><p class="text-warning"><strong><u>Registrar un juego (titulo)</u></strong></p></a>
-                <a href="listarTitulos.php"><p class="text-warning"><u>Listado de juegos (titulo)</u></p></a>
+                <h5 class="text-white h4 text-center mb-4">Gestion de videojuegos</h5>
+                <a href="registrarTitulos.php"><p class="text-warning"><strong><u>Registrar un videojuego (titulo)</u></strong></p></a>
+                <a href="listarTitulos.php"><p class="text-warning"><u>Listado de videojuegos (titulo)</u></p></a>
             </div>
         </div>
     
@@ -32,54 +32,57 @@
     <hr>
     <hr>
     <div class="container mt-5">
-        <form action="" method="post">
+        <form action="registrarTitulo.php" method="POST" enctype="multipart/form-data">
             <div class="row justify-content-center">
-                <h1 class="text-white mb-5">Registro de video juegos</h1>
+                <h1 class="text-warning mb-3 text-center"><strong>Registro de videojuegos</strong></h1>
             </div>
+            
             <div class="row justify-content-center">
                 <div class="col-md-5">
-                    <div class="form-group">
-                    <label for="nombre" class="text-danger mt-2">Nombre del video juego:</label>
-                        <input type="text" class="form-control" name="nombre"  placeholder="Ingrese el nombre del juego" required> 
+                    <div class="alert alert-danger mb-5" role="alert">
+                        <div class="form-group">
+                            <label for="nombre" class="text-danger mt-3"> <strong>Nombre del videojuego:</strong></label>
+                            <input type="text" class="form-control" name="nombre"  placeholder="Ingrese el nombre del videojuego" required> 
+                        </div>
+                        <div class="form-group">
+                            <label for="fechaEstreno" class="text-danger mt-3"><strong>Fecha estreno del videojuego:</strong></label>
+                            <input type="date" class="form-control" name="fechaEstreno"  placeholder="Ingrese el nombre del videojuego" required> 
+                        </div>
+                        <div class="form-group">
+                            <label  class="text-danger mt-3 col-md-12"><strong>Genero del videojuego:</strong></label>
+                            <select class="form-select-lg genero" name="genero" required>
+                                <option value="1" selected>Accion</option>
+                                <option value="2">Deporte</option>
+                                <option value="3">Aventura</option>
+                                <option value="4">Otro</option>
+                            </select> 
+                        </div>
+                        <div class="form-group">
+                        <label class="text-danger mt-3"><strong>Valor del videojuego:</strong></label>
+                        <input type="number" class="form-control" name="valor" placeholder="ingrese el precio del video juego" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="text-danger mt-3"><strong>Imagen del videojuego:</strong></label>
+                            <input type="file" class="form-control-file" name="imagen" >
+                            <small id="fileHelpId" class="form-text text-dark"><strong>*Solo se admite formato .png, .jpg, jpeg.</strong></small>
+                        </div>
+                        <p class="text-center mb-5"><button type="submit" class="btn btn-danger mt-3" name="registrar"><strong>Registrar videojuego</strong></button></p>
                     </div>
-                    <div class="form-group">
-                        <label for="fechaEstreno" class="text-danger mt-3">Fecha estreno del video juego:</label>
-                        <input type="date" class="form-control" name="fechaEstreno"  placeholder="Ingrese el nombre del juego" required> 
-                    </div>
-                    <div class="form-group">
-                        <label  class="text-danger mt-3">Genero del video juego:</label>
-                        <select class="form-select genero" name="genero" required>
-                            <option value="1" selected>Accion</option>
-                            <option value="2">Deporte</option>
-                            <option value="3">Aventura</option>
-                            <option value="4">Otro</option>
-                        </select> 
-                    </div>
-                    <div class="form-group">
-                      <label class="text-danger mt-3">Valor del video juego:</label>
-                      <input type="number" class="form-control" name="valor" placeholder="ingrese el precio del video juego" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="imagen" class="text-danger mt-3">Imagen del video juego:</label>
-                        <input type="file" class="form-control-file" name="imagen" required>
-                        <small id="fileHelpId" class="form-text text-danger">Solo se admite formato .png, .jpg, jpeg.</small>
-                    </div>
-                    <p class="text-center mb-5"><button type="submit" class="btn btn-danger mt-3" name="registrar">Registrar video juego</button></p>
                     
                 </div>
             </div>
                                             
         </form>      
     </div>
-    <footer class="bg-danger text-center text-white">
+    <footer class="bg-danger text-center text-white mt-5">
 		<div class="container">
 			<div class="row justify-content-around">
 				<div class="col-md-3 mt-3 text-warning">
 					<img src="recursos/creador.jpeg" alt="creador" class="w-100 img-fluid rounded-circle mt-4 mb-3">
-					<p>Carlos Andres Diaz Aguirre &copy;</p>
-        			<p>andrez1915@gmail.com</p>
-       				<p>Medellin - Colombia</p>
-					<p>2020</p>
+					<p> <strong>Carlos Andres Diaz Aguirre &copy;</strong></p>
+        			<p> <strong>andrez1915@gmail.com</strong></p>
+       				<p> <strong>Medellin - Colombia</strong></p>
+					<p> <strong>2020</strong></p>
 				</div>
 				
 			</div>
