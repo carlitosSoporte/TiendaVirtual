@@ -38,6 +38,9 @@
     <hr>
     <main>
       <div class="container">
+          <div class="row justify-content-center">
+            <h1 class="text-center text-warning mt-3 mb-5">LISTADO DE VIDEOJUEGOS</h1>
+          </div>
           <div class="row row-cols-1 row-cols-md-3">
               <?php foreach ($datosDevueltos as $fila) : ?>
                   <div class="col-md-4 mb-4">
@@ -45,26 +48,55 @@
                           <img src="data:<?= $fila["tipoImagen"]?>;base64,<?=base64_encode($fila['imagen'])?>" class="card-img-top" alt="fotos tv">
                           <div class="card-body">
                               <h5 class="card-title">Nombre: <?= $fila["nombre"] ?></h5>
-                              <p class="card-text">ID: <?= $fila["idTitulo"] ?><p class="lead"></p>
-                              <p class="card-text">Fecha Estreno: <?= $fila["fechaEstreno"] ?><p class="lead"></p>
-                              <p class="card-text">Genero: <?= $fila["genero"] ?><p class="lead"></p>
-                              <p class="card-text">Precio: $ <?= $fila["valor"] ?><p class="lead"></p>
-                              <p>
-                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editar<?= $fila["idTitulo"] ?>">
+                              <p class="card-text">ID: <strong><?= $fila["idTitulo"] ?></strong><p class="lead"></p>
+                              <p class="card-text">Fecha estreno: <strong><?= $fila["fechaEstreno"] ?></strong><p class="lead"></p>
+                              <p class="card-text">Genero: <strong><?= $fila["genero"] ?></strong><p class="lead"></p>
+                              <p class="card-text">Valor: <strong><?= $fila["valor"] ?></strong><p class="lead"></p>
+                              <p class="text-center">
+                                <button type="button" class="btn btn-warning col-md-8 col-8" data-toggle="modal" data-target="#editar<?= $fila["idTitulo"] ?>">
                                     Editar
                                 </button>
                               </p>
-                              <a href="eliminarTitulo.php?id=<?= $fila["idTitulo"]?>" class="btn btn-danger">Eliminar</a>
+                              <p class="text-center"><a href="eliminarTitulo.php?id=<?= $fila["idTitulo"]?>" class="btn btn-danger col-md-8 col-8">Eliminar</a></p>
+                              
                           </div>
+                          
                       </div>
-                      
+                      <div class="modal fade" id="editar<?= $fila["idTitulo"] ?>" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content bg-dark">
+                            <div class="modal-header">
+                              <h4 class="modal-title text-danger">Cambiar Precio e imagen</h4>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body text-warning">
+                              <form action="actualizarImagen" method="post" enctype="multipart/form-data">
+                                <div class="form-group">
+                                  <label>Nuevo Precio: </label>
+                                  <input type="text" class="form-control" name="valor"  value=<?=$fila['valor']?> placeholder="ingrese el nuevo precio">
+                                </div>
+                                <div class="form-group">
+                                  <label>Nueva imagen:</label>
+                                  <input type="file" class="form-control-file" name="imagen">
+                                  <small id="fileHelpId" class="form-text text-white"><strong>*Solo se admite formato .png, .jpg, jpeg.</strong></small>
+                                </div>
+                              </form>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div> 
                   </div>
               <?php endforeach ?>
           </div>
       </div>
     </main>
     
-    <footer class="bg-danger text-center text-white">
+    <footer class="bg-danger text-center text-white mt-5">
       <div class="container">
         <div class="row justify-content-around">
           <div class="col-md-3 mt-3 text-warning">
