@@ -34,11 +34,11 @@
     <div class="container mt-5">
         <form action="registrarTitulo.php" method="POST" enctype="multipart/form-data">
             <div class="row justify-content-center">
-                <h1 class="text-warning mb-3 text-center"><strong>Registro de videojuegos</strong></h1>
+                <h1 class="text-warning mb-3 text-center"><strong>Registro de videojuegos Actual</strong></h1>
             </div>
             
             <div class="row justify-content-center">
-                <div class="col-md-5">
+                <div class="col-md-6">
                     <div class="alert alert-danger mb-5" role="alert">
                         <div class="form-group">
                             <label for="nombre" class="text-danger mt-3"> <strong>Nombre del videojuego:</strong></label>

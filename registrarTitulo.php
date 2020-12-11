@@ -21,36 +21,47 @@ include("BaseDatos.php");
             }
             
             $nombre = $_POST["nombre"];
-            $fechaEstreno = $_POST["fechaEstreno"];
-            $valor = $_POST["valor"];
-            $tipoImagen = $_FILES["imagen"]['type'];
-            $nombreImagen = $_FILES["imagen"]["name"];
-            $tamanoImagen = $_FILES["imagen"]["size"];
-            $tipo = substr($tipoImagen,0,5);
-            if($tipo=='image'){
-                $imagenSubida = $_FILES['imagen']['tmp_name'];
-                $binariosImagen = addslashes(file_get_contents($imagenSubida));
+            $transaccion = new BaseDatos();
+            $buscarTitulo = "call sp_buscarTitulo('$nombre')";
+            $encontrado = $transaccion->leerDatos($buscarTitulo);
+            if(!$encontrado){
+                $fechaEstreno = $_POST["fechaEstreno"];
+                $valor = $_POST["valor"];
+                $tipoImagen = $_FILES["imagen"]['type'];
+                $nombreImagen = $_FILES["imagen"]["name"];
+                $tamanoImagen = $_FILES["imagen"]["size"];
+                $tipo = substr($tipoImagen,0,5);
+                if($tipo=='image'){
+                    $imagenSubida = $_FILES['imagen']['tmp_name'];
+                    $binariosImagen = addslashes(file_get_contents($imagenSubida));
 
-                $transaccion = new BaseDatos();
-                $consultaSQL = "call sp_registrarTitulo ('$nombre','$fechaEstreno','$genero','$valor','$tipoImagen','$binariosImagen')";
-                $respuesta = $transaccion->escribirDatos($consultaSQL);
-                
-                if($respuesta){
-                    session_start();
-                    $_SESSION['resultado'] = "1";
-                    header("location:respuesta.php");
+                    $consultaSQL = "call sp_registrarTitulo ('$nombre','$fechaEstreno','$genero','$valor','$tipoImagen','$binariosImagen')";
+                    $respuesta = $transaccion->escribirDatos($consultaSQL);
+                    
+                    if($respuesta){
+                        session_start();
+                        $_SESSION['resultado'] = "1";
+                        header("location:respuesta.php");
+                    }
+                    else{
+                        session_start();
+                        $_SESSION['resultado'] = "0";
+                        header("location:respuesta.php");
+                    }
+                    
                 }
                 else{
                     session_start();
-                    $_SESSION['resultado'] = "2";
+                    $_SESSION['resultado'] = "3";
                     header("location:respuesta.php");
-                }
+                }        
             }
             else{
                 session_start();
-                $_SESSION['resultado'] = "3";
-                header("location:respuesta.php");
-            }           
+                $_SESSION['resultado'] = "2";
+                header("location:respuesta.php"); 
+            }
+               
         }
     }
 ?>

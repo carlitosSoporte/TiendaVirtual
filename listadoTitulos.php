@@ -47,7 +47,7 @@
                       <div class="card h-100 text-warning bg-dark">
                           <img src="data:<?= $fila["tipoImagen"]?>;base64,<?=base64_encode($fila['imagen'])?>" class="card-img-top" alt="fotos tv">
                           <div class="card-body">
-                              <h5 class="card-title">Nombre: <?= $fila["nombre"] ?></h5>
+                              <h5 class="card-title">Nombre: <strong><?= $fila["nombre"] ?></strong></h5>
                               <p class="card-text">ID: <strong><?= $fila["idTitulo"] ?></strong><p class="lead"></p>
                               <p class="card-text">Fecha estreno: <strong><?= $fila["fechaEstreno"] ?></strong><p class="lead"></p>
                               <p class="card-text">Genero: <strong><?= $fila["genero"] ?></strong><p class="lead"></p>
@@ -72,7 +72,7 @@
                               </button>
                             </div>
                             <div class="modal-body text-warning">
-                              <form action="actualizarTitulo.php" method="post" enctype="multipart/form-data">
+                              <form action="actualizarTitulo.php?id=<?=$fila['idTitulo']?>" method="post" enctype="multipart/form-data">
                                 <div class="form-group">
                                   <label>Nuevo Precio: </label>
                                   <input type="text" class="form-control" name="valor"  value=<?=$fila['valor']?> placeholder="ingrese el nuevo precio">
@@ -82,7 +82,7 @@
                                   <input type="file" class="form-control-file" name="imagen">
                                   <small id="fileHelpId" class="form-text text-white"><strong>*Solo se admite formato .png, .jpg, jpeg.</strong></small>
                                 </div>
-                                <p class="text-center"><button type="submit" class="btn btn-danger col-md-5 col-5">Guardar</button></p>
+                                <p class="text-center"><button type="submit" class="btn btn-danger col-md-5 col-5" name="guardar">Guardar</button></p>
                               </form>
                             </div>
                             <div class="modal-footer">

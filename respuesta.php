@@ -2,13 +2,23 @@
     session_start();
     $respuesta = $_SESSION['resultado'];
     $formato = "formato de imagen incorrecto, registro cancelado.";
+    $formato2 = "formato de imagen incorrecto, Actualizacion cancelada.";
     $exitoso = "Datos ingresados correctamente.";
+    $errorRegistrar = "Error al registrar el videojuego";
+    $errorEliminar = "Ha ocurrido un error al intentar eliminar";
+    $tituloEliminado = "Videojuego Eliminado Satisfactoriamente";
+    $errorActualizar = "Error al intentar actualizar el videojuego";
+    $actulizadoCorrecto = "El videojuego se ha modificado correctamente";
     $duplicado = "Nombre de videojuego ya registrado anteriormente, valide la informacion.";
     $colorExitoso = "success";
     $colorErrorImagen = "danger";
-    $colorDuplicado = "warning";
+    $colorDuplicado = "dark";
 
     switch($respuesta){
+        case "0":
+        $color = $colorErrorImagen;
+        $mensaje = $errorRegistrar;
+        break;  
         case "1":
             $color = $colorExitoso;
             $mensaje = $exitoso;
@@ -22,6 +32,26 @@
         case "3":
             $color = $colorErrorImagen;
             $mensaje = $formato;
+        break;
+        case "4":
+          $color = $colorExitoso;
+          $mensaje = $tituloEliminado;
+        break;
+        case "5":
+          $color = $colorErrorImagen;
+          $mensaje = $errorEliminar;
+        break;
+        case "6":
+          $color = $colorExitoso;
+          $mensaje = $actulizadoCorrecto;
+        break;
+        case "7":
+          $color = $colorErrorImagen;
+          $mensaje = $errorActualizar;
+        break;
+        case "8":
+          $color = $colorErrorImagen;
+          $mensaje = $formato2;
         break;
     }
 
@@ -68,7 +98,8 @@
             <div class="col-md-7">
                 <div class="alert alert-<?=$color?> text-center text-danger p-5" role="alert">
                     <p class="col-md-12"><strong><?=$mensaje?></strong></p>
-                    <a class="btn btn-<?=$color?> col-md-8 mt-2" href="formularioTitulos.php" role="button">Volver al registro</a>
+                    <a class="btn btn-<?=$color?> col-md-8 mt-2" href="formularioTitulos.php" role="button">Volver al registro de videojuegos</a>
+                    <a class="btn btn-<?=$color?> col-md-8 mt-2" href="listadoTitulos.php" role="button">Volver al listado de videojuegos</a>
                 </div>
             </div>
         </div>

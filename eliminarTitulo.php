@@ -9,10 +9,14 @@
         $respuesta = $transaccion->escribirDatos($queryEliminar);
 
         if($respuesta){
-            echo "eliminado";
+            session_start();
+            $_SESSION['resultado']='4';
+            header('location:respuesta.php');
         }
         else{
-            echo "error";
+            session_start();
+            $_SESSION['resultado']='5';
+            header('location:respuesta.php');
         }
 
     }
