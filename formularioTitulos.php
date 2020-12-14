@@ -34,7 +34,7 @@
     <div class="container mt-5">
         <form action="registrarTitulo.php" method="POST" enctype="multipart/form-data">
             <div class="row justify-content-center">
-                <h1 class="text-warning mb-3 text-center"><strong>Registro de videojuegos Actual</strong></h1>
+                <h1 class="text-warning mb-3 text-center"><strong>Registro actual de videojuegos</strong></h1>
             </div>
             
             <div class="row justify-content-center">
