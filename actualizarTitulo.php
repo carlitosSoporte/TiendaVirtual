@@ -14,7 +14,7 @@ include("BaseDatos.php");
                 $binariosImagen = addslashes(file_get_contents($imagenSubida));
 
                 $transaccion = new BaseDatos();
-                $consultaSQL = "call sp_actualizarTitulo ($id,'$tipoImagen',$valor,'$binariosImagen')";
+                $consultaSQL = "update titulo set tipoImagen='$tipoImagen',valor=$valor,imagen='$binariosImagen'";
                 $respuesta = $transaccion->escribirDatos($consultaSQL);
                 
                 if($respuesta){

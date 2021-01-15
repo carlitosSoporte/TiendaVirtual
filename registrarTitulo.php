@@ -35,7 +35,7 @@ include("BaseDatos.php");
                     $imagenSubida = $_FILES['imagen']['tmp_name'];
                     $binariosImagen = addslashes(file_get_contents($imagenSubida));
 
-                    $consultaSQL = "call sp_registrarTitulo ('$nombre','$fechaEstreno','$genero','$valor','$tipoImagen','$binariosImagen')";
+                    $consultaSQL = "insert into titulo(nombre,fechaEstreno,genero,valor,tipoImagen,imagen) values ('$nombre','$fechaEstreno','$genero','$valor','$tipoImagen','$binariosImagen')";
                     $respuesta = $transaccion->escribirDatos($consultaSQL);
                     
                     if($respuesta){

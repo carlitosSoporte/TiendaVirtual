@@ -4,7 +4,7 @@
     if(isset($_GET['id'])){
         $id = $_GET['id'];
 
-        $queryEliminar = "call sp_eliminarTitulo($id)";
+        $queryEliminar = "delete from titulo where idTitulo=($id)";
         $transaccion = new BaseDatos();
         $respuesta = $transaccion->escribirDatos($queryEliminar);
 
