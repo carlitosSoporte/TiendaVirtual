@@ -22,7 +22,7 @@ include("BaseDatos.php");
             
             $nombre = $_POST["nombre"];
             $transaccion = new BaseDatos();
-            $buscarTitulo = "call sp_buscarTitulo('$nombre')";
+            $buscarTitulo = "selet * from titulo where nombre=('$nombre')";
             $encontrado = $transaccion->leerDatos($buscarTitulo);
             if(!$encontrado){
                 $fechaEstreno = $_POST["fechaEstreno"];
