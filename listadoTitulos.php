@@ -112,13 +112,46 @@
 
   <footer class="bg-danger text-center text-white mt-5">
     <div class="container">
-      <div class="row justify-content-around">
-        <div class="col-md-3 mt-3 text-warning">
-          <img src="recursos/creador.jpeg" alt="creador" class="w-100 img-fluid rounded-circle mt-4 mb-3">
-          <p> <strong>Carlos Andres Diaz Aguirre &copy;</strong></p>
-          <p> <strong>andrez1915@gmail.com</strong></p>
-          <p> <strong>Medellin - Colombia</strong></p>
-          <p> <strong>2020</strong></p>
+      <div class="row justify-content-center">
+        <div class="col-md-12">
+          <div class="card mb-5 mt-5 bg-secondary rounded-pill">
+            <div class="card-body">
+              <div class="row justify-content-center">
+                <div class="col-md-3 mt-3 text-warning">
+                  <img src="recursos/creador.jpeg" alt="creador" class="w-100 img-fluid rounded-circle mt- mb-3">
+
+                </div>
+                <div class="col-md-3 mt-5 text-warning">
+                  <p><i class="bi bi-emoji-sunglasses-fill"></i> <strong>Carlos Andres Diaz Aguirre &copy;</strong></p>
+                  <p><i class="bi bi-envelope-fill"></i> <strong>andrez1915@gmail.com</strong></p>
+                  <p><i class="bi bi-geo-alt-fill"></i> <strong>Medellin - Colombia</strong></p>
+                  <p><i class="bi bi-calendar3"></i> <strong>20<?= Date("y") ?></strong></p>
+                </div>
+                <div class="col-md-3 mt-4 text-warning">
+                  <div class="row mb-3">
+                    <div class="col">
+                      <a name="" id="" class="btn btn-outline-warning rounded-circle" href="" role="button"><i class="bi bi-linkedin"></i><strong> Linkedin</strong></a>
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col">
+                      <a name="" id="" class="btn btn-outline-warning rounded-circle" href="" role="button"><i class="bi bi-twitter"></i><strong> Twitter</strong></a>
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <div class="col">
+                      <a name="" id="" class="btn btn-outline-warning rounded-circle" href="" role="button"><i class="bi bi-facebook"></i><strong> Facebook</strong></a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <a name="" id="" target="_blank" class="btn btn-outline-warning rounded-circle" href="https://github.com/carlitosSoporte" role="button"><i class="bi bi-github"></i></i><strong> Github</strong></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
