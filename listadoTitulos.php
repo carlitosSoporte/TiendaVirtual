@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Short+Stack&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link type="text/css" rel="stylesheet" href="estyles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -21,12 +22,12 @@
       </nav>
       <div class="collapse text-center" id="navbarToggleExternalContent">
         <div class="bg-danger p-2">
-          <h5 class="text-white h4 text-center mb-4">Gestion de juegos</h5>
+          <h5 class="text-white h4 text-center mb-4"><i class="bi bi-controller"></i> Gestion de juegos</h5>
           <a href="formularioTitulos.php">
-            <p class="text-warning"><u>Registrar un juego (titulo)</u></p>
+            <p class="text-warning"><i class="bi bi-plus-square-dotted"></i> <u>Registrar un juego (titulo)</u></p>
           </a>
           <a href="listadoTitulos.php">
-            <p class="text-warning"> <strong><u>Listado de juegos (titulo) </u></strong> </p>
+            <p class="text-warning"><i class="bi bi-search"></i> <strong><u>Listado de juegos (titulo) </u></strong> </p>
           </a>
         </div>
       </div>
@@ -45,7 +46,7 @@
   <main>
     <div class="container">
       <div class="row justify-content-center">
-        <h1 class="text-center text-warning mt-3 mb-5">LISTADO DE VIDEOJUEGOS</h1>
+        <h1 class="text-center text-warning mt-3 mb-5"><i class="bi bi-joystick"></i> LISTADO DE VIDEOJUEGOS</h1>
       </div>
       <div class="row row-cols-1 row-cols-md-3">
         <?php if ($datosDevueltos) : ?>

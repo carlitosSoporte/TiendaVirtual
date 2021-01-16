@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="estyles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
 </head>
 <header>
     <div class="fixed-top">
@@ -20,12 +21,12 @@
         </nav>
         <div class="collapse text-center" id="navbarToggleExternalContent">
             <div class="bg-danger p-2">
-                <h5 class="text-white h4 text-center mb-4">Gestion de videojuegos</h5>
+                <h5 class="text-white h4 text-center mb-4"><i class="bi bi-controller"></i> Gestion de videojuegos</h5>
                 <a href="formularioTitulos.php">
-                    <p class="text-warning"><strong><u>Registrar un videojuego (titulo)</u></strong></p>
+                    <p class="text-warning"> <strong><i class="bi bi-plus-square-dotted"></i> <u>Registrar un videojuego (titulo)</u></strong></p>
                 </a>
                 <a href="listadoTitulos.php">
-                    <p class="text-warning"><u>Listado de videojuegos (titulo)</u></p>
+                    <p class="text-warning"><i class="bi bi-search"></i> <u>Listado de videojuegos (titulo)</u></p>
                 </a>
             </div>
         </div>
@@ -41,7 +42,7 @@
     <div class="container mt-5">
         <form action="registrarTitulo.php" method="POST" enctype="multipart/form-data">
             <div class="row justify-content-center">
-                <h1 class="text-warning mb-3 text-center"><strong>Registro actual de videojuegos</strong></h1>
+                <h1 class="text-warning mb-3 text-center"><i class="bi bi-joystick"></i> <strong>Registro actual de videojuegos</strong></h1>
             </div>
 
             <div class="row justify-content-center">
